@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompts - IA Boost</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; margin: 0; padding: 20px; }
+    .header { text-align: center; padding: 20px; background: linear-gradient(135deg, #6b46c1, #a855f7); border-radius: 16px; }
+    .card { background: #1e2937; padding: 20px; margin: 15px 0; border-radius: 16px; }
+    button { background: #22d3ee; color: black; border: none; padding: 12px 20px; border-radius: 12px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📚 Biblioteca de Prompts</h1>
+    <p>Prompts prontos e poderosos</p>
+  </div>
+
+  <div class="card">
+    <h2>Post para LinkedIn</h2>
+    <p>"Você é um especialista em marketing. Escreva um post profissional sobre [tema] com tom motivacional, incluindo emoji e call to action."</p>
+    <button onclick="copyPrompt(this)">Copiar Prompt</button>
+  </div>
+
+  <div class="card">
+    <h2>Ideias de Conteúdo</h2>
+    <p>"Gere 10 ideias de posts virais sobre Inteligência Artificial para Instagram Reels."</p>
+    <button onclick="copyPrompt(this)">Copiar Prompt</button>
+  </div>
+
+  <script>
+    function copyPrompt(btn) {
+      const text = btn.parentElement.querySelector('p').textContent;
+      navigator.clipboard.writeText(text);
+      btn.textContent = "✅ Copiado!";
+      setTimeout(() => btn.textContent = "Copiar Prompt", 2000);
+    }
+  </script>
+</body>
+</html>
