@@ -1,0 +1,35 @@
+---
+
+### 3. .gitignore Recomendado
+
+Crie um arquivo chamado `.gitignore` e cole:
+
+```gitignore
+# Ambientes virtuais
+venv/
+env/
+.venv/
+ENV/
+
+# Arquivos de cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de ambiente
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
